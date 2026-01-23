@@ -1,0 +1,292 @@
+/* .ai-human-control {
+  padding: 6rem 1.5rem;
+  background: hsl(0 0% 7%);
+}
+
+.ai-human-control__container {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ai-human-control__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: hsl(0 0% 98%);
+  transition: all 0.7s ease;
+}
+
+@media (min-width: 768px) {
+  .ai-human-control__title {
+    font-size: 3rem;
+  }
+}
+
+.ai-human-control__title--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-human-control__title--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.ai-human-control__description {
+  color: hsl(0 0% 65%);
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.7s ease;
+  transition-delay: 0.2s;
+}
+
+.ai-human-control__description--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-human-control__description--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.ai-human-control__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.7s ease;
+  transition-delay: 0.4s;
+}
+
+.ai-human-control__actions--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-human-control__actions--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.ai-human-control__btn {
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+} */
+
+/* Main container - Left Aligned */
+.ai-human-control {
+  padding: 120px 20px;
+  background: #0C0C0C;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-human-control__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* Changed from center to left */
+  position: relative;
+  z-index: 2;
+}
+
+/* Title styles - Left Aligned */
+.ai-human-control__title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 68px;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: -1.02px;
+  color: #F4F1F1;
+  margin-bottom: 24px;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left; /* Added */
+}
+
+.ai-human-control__title-ai {
+  background: linear-gradient(90deg, #FF8C00 0%, #FFA500 50%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Title animation states */
+.ai-human-control__title--visible {
+  opacity: 1;
+  transform: translateX(0); /* Changed from translateY to translateX */
+}
+
+.ai-human-control__title--hidden {
+  opacity: 0;
+  transform: translateX(-30px); /* Changed from translateY to translateX */
+}
+
+/* Description styles - Left Aligned */
+.ai-human-control__description {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 39.2px;
+  color: #FAFAFA;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: 0; /* Changed from auto */
+  margin-right: 0; /* Changed from auto */
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.1s;
+  text-align: left; /* Added */
+}
+
+.ai-human-control__description--visible {
+  opacity: 1;
+  transform: translateX(0); /* Changed from translateY to translateX */
+}
+
+.ai-human-control__description--hidden {
+  opacity: 0;
+  transform: translateX(-30px); /* Changed from translateY to translateX */
+}
+
+/* Actions container - Left Aligned */
+.ai-human-control__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  align-items: center;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+}
+
+.ai-human-control__actions--visible {
+  opacity: 1;
+  transform: translateX(0); /* Changed from translateY to translateX */
+}
+
+.ai-human-control__actions--hidden {
+  opacity: 0;
+  transform: translateX(-30px); /* Changed from translateY to translateX */
+}
+
+/* Button styles */
+.ai-human-control__btn {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 12px 32px;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primary button */
+.ai-human-control__btn--primary {
+  background: linear-gradient(90deg, #FA8826 0%, #FFA042 100%);
+  color: #181818;
+  box-shadow: 0 4px 20px rgba(250, 136, 38, 0.3);
+}
+
+.ai-human-control__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(250, 136, 38, 0.4);
+}
+
+.ai-human-control__btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 15px rgba(250, 136, 38, 0.3);
+}
+
+/* Secondary button */
+.ai-human-control__btn--secondary {
+  background: transparent;
+  color: #FAFAFA;
+  border: 1px solid rgba(250, 136, 38, 0.4);
+  position: relative;
+}
+
+.ai-human-control__btn--secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(250, 136, 38, 0.1) 0%, rgba(255, 160, 66, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 40px;
+}
+
+.ai-human-control__btn--secondary:hover::before {
+  opacity: 1;
+}
+
+.ai-human-control__btn--secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(250, 136, 38, 0.8);
+}
+
+.ai-human-control__btn--secondary:active {
+  transform: translateY(0);
+}
+
+/* Responsive design for left alignment */
+@media (max-width: 768px) {
+  .ai-human-control {
+    padding: 80px 20px;
+  }
+  
+  .ai-human-control__title {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.72px;
+  }
+  
+  .ai-human-control__description {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .ai-human-control__actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start; /* Changed from center to flex-start */
+  }
+  
+  .ai-human-control__btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 24px; /* Adjusted for better left alignment */
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-human-control__title {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.54px;
+  }
+  
+  .ai-human-control__description {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+}
