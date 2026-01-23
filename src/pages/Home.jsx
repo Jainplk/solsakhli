@@ -2,30 +2,30 @@
 // import Footer from "../components/layout/Footer";
 import Layout from "../components/layout/Layout";
 
-// import HeroSection from "../components/hero/HeroSection";
-// import ForSmallBusiness from "../components/business/ForSmallBusiness";
-// import ForAgencies from "../components/agencies/ForAgencies";
+import HeroSection from "../components/hero/HeroSection";
 // import FeaturesSection from "../components/features/FeaturesSection";
 // import WorkflowSection from "../components/workflow/WorkflowSection";
 // import PricingSection from "../components/pricing/PricingSection";
-
-
+import BusinessPlansSection from "../components/BusinessPlansSection/BusinessPlansSection";
+import AIHumanSection from "../components/AIHumanSection/AIHumanSection";
 import "../App.css";
-
+import DesignedForWorkSection from "../components/DesignedForWorkSection/DesignedForWorkSection";
 export default function Home() {
   return (
     <Layout>
       {/* <Navbar /> */}
 
       <main>
-        <h2>Hello welcome to my world</h2>
-        {/* <HeroSection />
-        <ForSmallBusiness />
-        <ForAgencies />
+        <HeroSection />
+        {/* 
         <FeaturesSection />
         <WorkflowSection />
         <PricingSection />
         <HumanControlSection /> */}
+
+        <BusinessPlansSection />
+        <DesignedForWorkSection />
+        <AIHumanSection />
       </main>
 
       {/* <Footer /> */}
