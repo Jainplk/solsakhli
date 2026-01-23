@@ -2,21 +2,23 @@ import { useEffect, useRef, useState } from 'react';
 import './BusinessSection.css';
 
 interface BusinessSectionProps {
+  title: string;
+  subtitle: string;
   features: string[];
   imageSrc: string;
   imageAlt: string;
   reverse?: boolean;
-  buttonText?: string;
-  cardTitle?: string;
+  label: string;
 }
 
 const BusinessSection = ({ 
+  title, 
+  subtitle, 
   features, 
   imageSrc, 
   imageAlt, 
   reverse = false,
-  buttonText = "Build Your Website",
-  cardTitle
+  label 
 }: BusinessSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -41,10 +43,33 @@ const BusinessSection = ({
   return (
     <section ref={sectionRef} className="business-section">
       <div className="business-section__container">
+        {/* Label */}
+        <div 
+          className={`business-section__label ${
+            isVisible ? 'business-section__label--visible' : 'business-section__label--hidden'
+          }`}
+        >
+          {label}
+        </div>
+
         <div className={`business-section__content ${reverse ? 'business-section__content--reverse' : ''}`}>
-          {/* Text Content with Points */}
+          {/* Content */}
           <div className="business-section__text">
-            {/* Features with bullet points */}
+            <h2 
+              className={`business-section__title ${
+                isVisible ? 'business-section__title--visible' : 'business-section__title--hidden'
+              }`}
+            >
+              {title}
+            </h2>
+            <p 
+              className={`business-section__subtitle ${
+                isVisible ? 'business-section__subtitle--visible' : 'business-section__subtitle--hidden'
+              }`}
+            >
+              {subtitle}
+            </p>
+
             <ul className="business-section__features">
               {features.map((feature, index) => (
                 <li 
@@ -54,24 +79,23 @@ const BusinessSection = ({
                   }`}
                   style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
-                  <span className="business-section__feature-bullet">•</span>
-                  <span className="business-section__feature-text">{feature}</span>
+                  <span className="business-section__feature-icon">✦</span>
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
 
-            {/* CTA Button */}
             <button 
-              className={`business-section__cta ${
+              className={`business-section__cta btn-primary ${
                 isVisible ? 'business-section__cta--visible' : 'business-section__cta--hidden'
               }`}
-              style={{ transitionDelay: `${300 + features.length * 100}ms` }}
+              style={{ transitionDelay: '600ms' }}
             >
-              {buttonText}
+              Subscribe Now
             </button>
           </div>
 
-          {/* Image with Card */}
+          {/* Image */}
           <div 
             className={`business-section__image-wrapper ${
               isVisible 
@@ -81,19 +105,12 @@ const BusinessSection = ({
                   : 'business-section__image-wrapper--hidden-right'
             }`}
           >
-            <div className="business-section__card">
-              {/* Card title if provided */}
-              {cardTitle && (
-                <div className="business-section__card-title">{cardTitle}</div>
-              )}
-              
-              <div className="business-section__image-container">
-                <img 
-                  src={imageSrc} 
-                  alt={imageAlt}
-                  className="business-section__image"
-                />
-              </div>
+            <div className="business-section__image-container">
+              <img 
+                src={imageSrc} 
+                alt={imageAlt}
+                className="business-section__image"
+              />
             </div>
           </div>
         </div>

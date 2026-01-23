@@ -1,0 +1,81 @@
+.ai-human-control {
+  padding: 6rem 1.5rem;
+  background: hsl(0 0% 7%);
+}
+
+.ai-human-control__container {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ai-human-control__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: hsl(0 0% 98%);
+  transition: all 0.7s ease;
+}
+
+@media (min-width: 768px) {
+  .ai-human-control__title {
+    font-size: 3rem;
+  }
+}
+
+.ai-human-control__title--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-human-control__title--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.ai-human-control__description {
+  color: hsl(0 0% 65%);
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.7s ease;
+  transition-delay: 0.2s;
+}
+
+.ai-human-control__description--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-human-control__description--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.ai-human-control__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.7s ease;
+  transition-delay: 0.4s;
+}
+
+.ai-human-control__actions--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-human-control__actions--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.ai-human-control__btn {
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}

@@ -1,0 +1,102 @@
+.meet-bella {
+  padding: 6rem 1.5rem;
+}
+
+.meet-bella__container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.meet-bella__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: hsl(0 0% 98%);
+  transition: all 0.7s ease;
+}
+
+@media (min-width: 768px) {
+  .meet-bella__title {
+    font-size: 3rem;
+  }
+}
+
+.meet-bella__title--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.meet-bella__title--hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.meet-bella__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .meet-bella__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.meet-bella__card {
+  background: hsl(0 0% 7%);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid hsl(0 0% 18%);
+  transition: all 0.7s ease;
+}
+
+.meet-bella__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: hsl(24 100% 50% / 0.5);
+}
+
+.meet-bella__card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.meet-bella__card--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+.meet-bella__card-image-container {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.meet-bella__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.meet-bella__card:hover .meet-bella__card-image {
+  transform: scale(1.05);
+}
+
+.meet-bella__card-content {
+  padding: 1.5rem;
+}
+
+.meet-bella__card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: hsl(0 0% 98%);
+}
+
+.meet-bella__card-description {
+  color: hsl(0 0% 65%);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
