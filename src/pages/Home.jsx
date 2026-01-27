@@ -5,11 +5,12 @@ import Layout from "../components/layout/Layout";
 import HeroSection from "../components/hero/HeroSection";
 // import FeaturesSection from "../components/features/FeaturesSection";
 // import WorkflowSection from "../components/workflow/WorkflowSection";
-// import PricingSection from "../components/pricing/PricingSection";
+import PricingSection from "../components/pricing/PricingSection";
 import BusinessPlansSection from "../components/BusinessPlansSection/BusinessPlansSection";
 import AIHumanSection from "../components/AIHumanSection/AIHumanSection";
 import "../App.css";
 import DesignedForWorkSection from "../components/DesignedForWorkSection/DesignedForWorkSection";
+import MeetBellaSection from "../components/MeetBellaSection/MeetBellaSection";
 export default function Home() {
   return (
     <Layout>
@@ -20,11 +21,13 @@ export default function Home() {
         {/* 
         <FeaturesSection />
         <WorkflowSection />
-        <PricingSection />
+        
         <HumanControlSection /> */}
 
         <BusinessPlansSection />
+        <MeetBellaSection />
         <DesignedForWorkSection />
+<PricingSection />
         <AIHumanSection />
       </main>
 
