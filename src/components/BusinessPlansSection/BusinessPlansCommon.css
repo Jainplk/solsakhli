@@ -1,0 +1,232 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(250, 136, 38, 0);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(250, 136, 38, 0.5);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes businessTitleEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes businessScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-2deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes businessSlideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes businessImageFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes businessGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(250, 136, 38, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(250, 136, 38, 0.3);
+  }
+}
+
+@keyframes agenciesTitleEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    letter-spacing: -5px;
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+    letter-spacing: -1px;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: -0.9px;
+  }
+}
+
+@keyframes agenciesScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(2deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes agenciesSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes agenciesImageFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes agenciesGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(250, 136, 38, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(250, 136, 38, 0.4);
+  }
+}
+
+@keyframes agenciesCardHover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+* {
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .text-\[60px\] {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  
+  .h-\[400px\] {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-\[60px\] {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  
+  .h-\[400px\] {
+    height: 250px;
+  }
+}
