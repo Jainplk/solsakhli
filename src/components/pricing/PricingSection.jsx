@@ -9,16 +9,17 @@ export default function PricingSection() {
     {
       id: 'essentials',
       name: 'Bella LV-3 Essentials Plan',
-      price: 249,
+      price: 399,
       description: 'One time setup fee plus',
       monthly: 24.95,
       features: [
-        'Managed WordPress hosting',
-        'Performance optimization',
-        'Security hardening & monitoring',
-        'Automated backups',
-        'Core & plugin updates',
-        'Early Access to Bella LV-3 Features'
+        'Dedicated onboarding & account support',
+        'Structured brand intake & positioning',
+        'Mood board & visual direction development',
+        'Professional website design & layout build',
+        'Strategic, conversion-focused development',
+        'Performance-optimized hosting',
+        'Ongoing maintenance & management'
       ]
     },
     {
@@ -26,15 +27,17 @@ export default function PricingSection() {
       name: 'Bella LV-3 Pro Plan',
       badge: 'POPULAR',
       badgeColor: 'bg-orange-500',
-      price: 399,
+      price: 599,
       description: 'One time setup fee plus',
       monthly: 24.95,
       features: [
         'Everything in Essentials',
-        'Support for complex websites',
-        'Greater design flexibility & customization',
-        'Priority access to new Bella LV-3 capabilities',
-        'Built to scale as your business grows'
+        'Expanded design refinement',
+        'Complex layout & component builds',
+        'Advanced customization capability',
+        'Automation-ready architecture',
+        'Higher-touch collaboration & refinement',
+        'Priority deployment handling'
       ],
       hasDetails: true
     }
@@ -79,11 +82,11 @@ export default function PricingSection() {
         </div>
  
         {/* Compare */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all hover:scale-105">
             Compare Plans
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

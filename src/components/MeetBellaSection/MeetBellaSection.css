@@ -1,12 +1,13 @@
 
 .bella-section {
   padding: 120px 80px;
-  background: radial-gradient(
+  /* background: radial-gradient(
       80% 60% at 50% 0%,
       rgba(255, 255, 255, 0.06),
       transparent 60%
     ),
-    #0b0f14;
+    #0b0f14; */
+    
   position: relative;
   overflow: hidden;
 }

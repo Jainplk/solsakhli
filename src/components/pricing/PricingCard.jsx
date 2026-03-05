@@ -13,6 +13,7 @@ export default function PricingCard({
  
   return (
     <div
+      id='pricing'
       className="relative group perspective"
       onMouseEnter={onHover}
       onMouseLeave={onLeave}

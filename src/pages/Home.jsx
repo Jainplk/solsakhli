@@ -27,7 +27,7 @@ export default function Home() {
         <BusinessPlansSection />
         <MeetBellaSection />
         <DesignedForWorkSection />
-<PricingSection />
+        <PricingSection />
         <AIHumanSection />
       </main>
 

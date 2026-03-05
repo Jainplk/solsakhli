@@ -34,7 +34,7 @@ export default function AIHumanSection() {
   return (
     <section
       ref={containerRef}
-      className="ai-human-section min-h-screen w-full flex items-center justify-center px-6 relative overflow-hidden bg-[#0D1014]"
+      className="ai-human-section min-h-screen w-full flex items-center justify-center px-6 relative overflow-hidden bg-[#0a0a0a]"
     >
       <div className="w-full max-w-7xl relative z-10">
         <div className="max-w-6xl mx-auto">

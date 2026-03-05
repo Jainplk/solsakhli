@@ -78,7 +78,7 @@ export default function DesignedForWorkSection() {
   ];
 
   return (
-    <section className="work-section">
+    <section className="work-section bg-[#0a0a0a]">
       <div className="container">
   
         <div className="header fade-in-up">
@@ -99,7 +99,7 @@ export default function DesignedForWorkSection() {
               containerRef.current = el;
               imageRef.current = el;
             }}
-            className={`image-wrap fade-in-up ${isImageInView ? "image-animated" : ""}`}
+            className={`image-wrap `}
             style={{
               transform: `
                 perspective(1000px)

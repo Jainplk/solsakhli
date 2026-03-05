@@ -59,7 +59,7 @@ export default function MeetBellaSection() {
   ];
 
   return (
-    <section className="bella-section" ref={sectionRef}>
+    <section className="bella-section bg-[#0a0a0a]" ref={sectionRef}>
      
       <h2 className="bella-title fade-in">
         <span className="orange">Meet</span>{" "}

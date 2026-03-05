@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import SplitText from '../ReactBits/SplitText';
+import DottedBackground from '../FramerMotion/DottedBackground';
+import Navbar from '../Navbar/Navbar';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -15,9 +18,20 @@ const HeroSection = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const handleAnimationComplete = () => {
+    console.log('All letters have animated!');
+  };
+
   return (
     // <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
-        <section className="relative min-h-screen bg-black overflow-hidden">
+    <section className="relative min-h-screen bg-black overflow-hidden">
+    
+      <DottedBackground />
+
+      <Navbar />
+
+  
+
       {/* Animated background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -38,7 +52,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-          <div className="relative z-10 max-w-[1600px] mx-auto px-2 sm:px-6 lg:px-12 pt-24 sm:pt-32 pb-16 sm:pb-24 flex flex-col items-center justify-center min-h-screen">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-2 sm:px-6 lg:px-12 pt-24 sm:pt-32 pb-16 sm:pb-24 flex flex-col items-center justify-center min-h-screen">
 
         {/* Badge */}
         <div className="mb-6 sm:mb-8 animate-fade-in">
@@ -50,14 +64,56 @@ const HeroSection = () => {
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-full font-bold text-center mb-6 sm:mb-8 animate-slide-up leading-tight ">
           <span className="text-orange-500 inline-block hover:scale-105 transition-transform duration-300">
-            AI Precision.
+            <SplitText
+              text="AI Precision."
+              delay={50}
+              duration={1.25}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+              onLetterAnimationComplete={handleAnimationComplete}
+              showCallback
+            />
+            {/* AI Precision. */}
           </span>{' '}
           <span className="text-white inline-block hover:scale-105 transition-transform duration-300">
-            Human Creativity.
+            <SplitText
+              text=" Human Creativity."
+              delay={50}
+              duration={1.25}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+              onLetterAnimationComplete={handleAnimationComplete}
+              showCallback
+            />
+           
           </span>
-          <br  />
+          <br />
           <span className="text-white inline-block hover:scale-105 transition-transform duration-300">
-            Powerful Websites.
+            <SplitText
+              text="Powerful Websites."
+              delay={50}
+              duration={1.25}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+              onLetterAnimationComplete={handleAnimationComplete}
+              showCallback
+            />
+           
           </span>
         </h1>
 
